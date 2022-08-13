@@ -1,0 +1,38 @@
+@use "_mixin" as m;
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: 700;
+    @include m.mq(sp) {
+        min-width: 375px;
+        min-height: 100%;
+        margin: 0 auto;
+    }
+}
+
+.c-content_ttl {
+    color: #125093;
+    font-size: 25px;
+    position: absolute;
+    top: 50px;
+    left: 200px;
+    width: 286px;
+    height: 46px;
+    text-align: left;
+    margin: 0;
+    z-index: 11;
+    @include m.mq(sp) {
+        left: 100px;
+        color: #125093;
+    }
+}
+
+a:visited {
+    color: black;
+}
+
+.c-content {
+    width: 300px;
+}

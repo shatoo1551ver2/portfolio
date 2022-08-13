@@ -1,0 +1,45 @@
+@use "../../foundation/_mixin" as m;
+.p-skill {
+    position: relative;
+    height: 500px;
+    // background-image: url(../images/skill__bg.png);
+    // background-size: cover;
+    &_contents {
+        position: absolute;
+        height: 250px;
+        width: 400px;
+        z-index: 11;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        left: 0;
+        right: 0;
+        top: 60px;
+        bottom: 0;
+        margin: auto;
+    }
+    &_content {
+        width: 120px;
+    }
+    &_content--img {
+        width: 110px;
+        margin: 0;
+    }
+    &_content--ttl {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    @include m.mq(sp) {
+        height: 600px;
+        background-image: url(../images/skill__bg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &_contents {
+            position: absolute;
+            width: 250px;
+            top: 40px;
+        }
+    }
+}

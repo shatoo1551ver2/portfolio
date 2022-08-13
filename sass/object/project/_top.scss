@@ -1,0 +1,117 @@
+@use "../../foundation/_mixin" as m;
+.p-top {
+    background-image: url(../images/top__hero.png);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    text-align: center;
+    &_containers {
+        height: 400px;
+        position: absolute;
+        top: 70%;
+        /* 親要素の半分下にずらす */
+        left: 50%;
+        /* 親要素の半分右にずらす */
+        transform: translateY(-50%) translateX(-50%);
+        /* 要素自体の半分、上と左にずらす */
+        z-index: 10;
+        position: relative;
+        text-align: center;
+    }
+    &_ttl {
+        z-index: 11;
+        margin: auto;
+    }
+    &_ttl--ttl {
+        font-size: 50px;
+        margin-bottom: 0px;
+    }
+    &_ttl--txt {
+        font-size: 25px;
+        margin-top: 0px;
+    }
+    &_container {
+        margin: 100px auto;
+        width: 50rem;
+    }
+    &_contents {
+        display: flex;
+        justify-content: space-between;
+    }
+    &_contens {
+        margin-left: 42px;
+        width: 200px;
+    }
+    &_content--title {
+        margin-top: 5px;
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    &_content--text {
+        font-size: 15px;
+        height: 60px;
+    }
+    @include m.mq(sp) {
+        background-image: url(../images/top__hero_sp.png);
+        background-size: cover;
+        width: 100%;
+        &_ttl {
+            width: 343px;
+            top: 10px;
+        }
+        &_ttl-ttl {
+            font-size: 15px;
+        }
+        &_ttl--txt {
+            font-size: 20px;
+            padding-top: 10px;
+        }
+        &_container {
+            top: 300px;
+            width: 232px;
+            height: 264px;
+        }
+        &_contents {
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        &_contens {
+            width: 97px;
+            height: 124px;
+            margin-left: 10px;
+        }
+        &_content--title {
+            font-size: 10px;
+        }
+        &_content--text {
+            font-size: 8px;
+        }
+    }
+    &_w {
+        font-size: 25px;
+        height: 200px;
+        width: 100%;
+        position: relative;
+        padding-left: 0;
+        padding-right: 0;
+        &_img {
+            position: absolute;
+            width: 100%;
+        }
+        &_ttlrap {
+            position: absolute;
+            height: 0;
+            right: 0;
+            background-color: rgb(0, 0, 0, 0);
+            width: 200px;
+            border-bottom: 200px solid #fff;
+            border-left: 200px solid transparent;
+            border-right: 0px solid transparent;
+        }
+        &_ttl {
+            text-align: center;
+            margin-top: 100px;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@use "../../foundation/_mixin" as m;
+.p-about {
+    background-image: url(../images/about__bg.png);
+    background-size: cover;
+    position: relative;
+    height: 750px;
+    &_cts {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 11;
+        top: 130px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 850px;
+    }
+    &_ct {
+        width: 350px;
+    }
+    &_ct--txt {
+        font-size: 20px;
+        margin-top: 100px;
+    }
+    &_ct_img {
+        width: 100%;
+    }
+    &_button {
+        position: absolute;
+        left: 500px;
+        top: 400px;
+    }
+    @include m.mq(sp) {
+        background-image: url(../images/about__bg.png);
+        background-size: auto;
+        height: 900px;
+        width: 100%;
+        text-align: center;
+        &_ct {
+            width: 100%;
+            height: 400px;
+            padding: 0;
+        }
+        &_cts {
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+        &__ttl {
+            left: 150px;
+        }
+        &_ct_img {
+            width: 270px;
+        }
+        &_ct--txt {
+            width: 343px;
+            font-size: 15px;
+            margin: 0;
+            max-width: auto 0;
+        }
+        &_button {
+            bottom: 200px;
+            left: 100px;
+            top: 600px;
+            background-color: white;
+        }
+    }
+}

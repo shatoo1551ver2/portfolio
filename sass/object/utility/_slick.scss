@@ -1,0 +1,35 @@
+@use "../../foundation/_mixin" as m;
+.slide-arrow {
+    width: 60px;
+}
+
+.slick-slider {
+    display: flex;
+}
+
+@include m.mq(sp) {
+    .slide-arrow {
+        display: none;
+    }
+}
+
+.slick-arrow {
+    position: absolute;
+}
+
+.prev-arrow {
+    top: 50%;
+    right: 1300px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    z-index: 10;
+}
+
+.next-arrow {
+    top: 50%;
+    left: 1300px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}

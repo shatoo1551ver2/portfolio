@@ -1,0 +1,29 @@
+@use "../foundation/_mixin" as m;
+footer {
+    background-color: #F0F0F0;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    a {
+        margin-left: 112px;
+        margin-top: 10px;
+    }
+    h5 {
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+    @include m.mq(sp) {
+        display: block;
+        height: 100px;
+        a {
+            font-size: 25px;
+            margin-left: 0;
+            padding-top: 40px;
+        }
+        h5 {
+            margin-left: 0;
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+    }
+}
